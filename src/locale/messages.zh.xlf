@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="989514393698347487" datatype="html">
+        <source>first works!</source>
+        <target>中文</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3277059772153279197" datatype="html">
+        <source>hero image</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2479153568011052087" datatype="html">
+        <source>shopping icon</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8075168556531069883" datatype="html">
+        <source>Item</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7826783489111304264" datatype="html">
+        <source>Qty</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3973931101896534797" datatype="html">
+        <source>Date</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6533918067030990396" datatype="html">
+        <source>Amount</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1737753151350322492" datatype="html">
+        <source><x id="PH" equiv-text="this.title"/></source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/first/first.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="629292117839069224" datatype="html">
+        <source>home works!</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4550958265168690830" datatype="html">
+        <source>Logo</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2241508602425256033" datatype="html">
+        <source>First</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4791345740322435630" datatype="html">
+        <source>Second</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2471041631220366258" datatype="html">
+        <source>404</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-find/page-not-find.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4529818957203722990" datatype="html">
+        <source>Oops! Looks like you&apos;re lost.</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-find/page-not-find.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5412990892588701571" datatype="html">
+        <source>Let&apos;s get you back <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/&quot; routerLinkActive=&quot;active&quot; ariaCurrentWhenActive=&quot;page&quot;&gt;"/>Home<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-find/page-not-find.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6959497441009812685" datatype="html">
+        <source>Full Name</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-find/page-not-find.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-find/page-not-find.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7084378498770243742" datatype="html">
+        <source>Button</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-find/page-not-find.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7678283526834877214" datatype="html">
+        <source>second works!</source>
+        <target>imagen de héroe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/second/second.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

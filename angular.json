@@ -4,6 +4,19 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-app3": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "en-TW": {
+            "translation": "src/locale/messages.zh.xlf",
+            "baseHref": "en-TW/"
+          },
+          "en-ZH": {
+            "translation": "src/locale/messages.ch.xlf",
+            "baseHref": "en-ZH/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +30,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize":["en-ZH"],  //這個位可以用ng serve改語言
             "outputPath": "dist/my-app3",
             "index": "src/index.html",
             "browser": "src/main.ts",
