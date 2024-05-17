@@ -30,7 +30,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize":["en-ZH"],  //這個位可以用ng serve改語言
+            "localize":["en-ZH", "en-TW", "en-US"], // build only
             "outputPath": "dist/my-app3",
             "index": "src/index.html",
             "browser": "src/main.ts",
