@@ -1,20 +1,131 @@
-<header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span i18n class="ml-3 text-xl">Logo</span>
-      </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a i18n routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">Home</a>
-        <a i18n routerLink="/first" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">First</a>
-        <a i18n routerLink="/second" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">Second</a>
-      </nav>
-      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" onclick="window.location.href='/en-ZH'">Button
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </button>
-    </div>
-  </header>
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a routerLink="/">Sabah You</a>
+  </div>
+  <div class="navbar-toggle" (click)="toggleMenu()">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </div>
+  <ul class="navbar-menu" [ngClass]="{ open: isMenuOpen }">
+    <li class="no-bullet">
+      <div
+        class="navbar-toggle"
+        [ngClass]="{ open: isMenuOpen }"
+        (click)="toggleMenu()"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+    </li>
+    <li class="no-bullet">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">{{ home }}</a>
+    </li>
+    <li class="no-bullet">
+      <a routerLink="/first" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">{{ firstPage }}</a>
+    </li>
+    <li class="no-bullet">
+      <a routerLink="/second" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">{{ secondPage }}</a>
+    </li>
+
+    <!--<select #langSelect (change)="translate.use(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>-->
+  </ul>
+</nav>
+
+<div class="responsiveContainer">
+  <div class="r-logo">
+    <img
+      src="../assets/logoOfSabah3.png"
+      alt="logo"
+      [ngClass]="{ open: isMenuOpen }"
+    />
+  </div>
+  <div class="r-contact">
+    <img src="../assets/whatsapp.png" alt="line" /><img
+      src="../assets/line.png"
+      alt="line"
+    />
+  </div>
+  <div class="r-button">
+    <button>
+      <img
+        src="../assets/icons8-home.svg"
+        alt="home"
+        class="svgButton"
+      />首頁</button
+    ><button>
+      <img
+        src="../assets/map-find-search-svgrepo-com.svg"
+        alt=""
+        class="svgButton"
+      />網站地圖</button
+    ><button>
+      <img
+        src="../assets/contact-us-filled-svgrepo-com.svg"
+        alt=""
+        class="svgButton"
+      />聯絡我們
+    </button>
+  </div>
+  <div class="r-slogon">
+    <ul>
+      <div>
+        <li class="one no-bullet vertical-line">沙巴遊</li>
+        <li class="two no-bullet vertical-line-2">沙巴自由行旅遊活動平台</li>
+      </div>
+      <li class="three zIndex no-bullet vertical-line">玩的開心 玩的放心</li>
+    </ul>
+  </div>
+  <div class="r-content">
+    <ul>
+      <li class="zIndex bullet-orange"><div>沙巴歡迎你</div></li>
+      <li class="zIndex bullet-orange">
+        各種
+        <div>精彩的活動</div>
+      </li>
+      <li class="zIndex bullet-orange">
+        <div>輕鬆計劃</div>
+        您的沙巴行程
+      </li>
+    </ul>
+  </div>
+  <div class="r-map"><img src="../assets/map background.png" alt="map" /></div>
+
+  <div class="r-plan">
+    <ul>
+      <li class="zIndex underline bullet-white">
+        <div class="content"></div>
+        <div class="vertical-line-3"></div>
+        收集資料
+        <div>認識沙巴</div>
+      </li>
+      <li class="zIndex underline bullet-white">
+        <div class="content"></div>
+        <div class="vertical-line-3"></div>
+        由你
+        <div>決定行程</div>
+      </li>
+      <li class="zIndex underline bullet-white">
+        <div class="content"></div>
+        <div class="vertical-line-3"></div>
+        準備
+        <div>機票簽證和住宿</div>
+      </li>
+      <li class="zIndex underline bullet-white">
+        <div class="content"></div>
+        <div class="vertical-line-3"></div>
+        <div>預約活動</div>
+        豐富你的行程
+      </li>
+      <li class="zIndex underline bullet-white">
+        <div class="content"></div>
+        <div class="vertical-line-3"></div>
+        觀賞
+        <div>影片和相片</div>
+      </li>
+    </ul>
+  </div>
+</div>

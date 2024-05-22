@@ -32,5 +32,6 @@ cp src/locale/messages.xlf src/locale/messages.es.xlf
 ng serve
 ng build --localize
 npx serve .\dist\my-app3\
+npx serve ./dist/my-app3/browser/
 ch-CH
 ch-ZH
