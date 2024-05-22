@@ -19,14 +19,35 @@
         <span class="icon-bar"></span>
       </div>
     </li>
-    <li class="no-bullet">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">{{ home }}</a>
+    <li class="no-bullet navbar-toggle">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        class="mr-5 hover:text-gray-900"
+        >{{ home }}</a
+      >
     </li>
-    <li class="no-bullet">
-      <a routerLink="/first" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">{{ firstPage }}</a>
+    <li class="no-bullet navbar-toggle">
+      <a
+        routerLink="/first"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        class="mr-5 hover:text-gray-900"
+        >{{ firstPage }}</a
+      >
     </li>
-    <li class="no-bullet">
-      <a routerLink="/second" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-gray-900">{{ secondPage }}</a>
+    <li class="no-bullet navbar-toggle">
+      <a
+        routerLink="/second"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        class="mr-5 hover:text-gray-900"
+        >{{ secondPage }}</a
+      >
     </li>
 
     <!--<select #langSelect (change)="translate.use(langSelect.value)">
@@ -51,23 +72,47 @@
   </div>
   <div class="r-button">
     <button>
-      <img
-        src="../assets/icons8-home.svg"
-        alt="home"
-        class="svgButton"
-      />首頁</button
-    ><button>
-      <img
-        src="../assets/map-find-search-svgrepo-com.svg"
-        alt=""
-        class="svgButton"
-      />網站地圖</button
-    ><button>
-      <img
-        src="../assets/contact-us-filled-svgrepo-com.svg"
-        alt=""
-        class="svgButton"
-      />聯絡我們
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        class="mr-5 hover:text-gray-900"
+        ><img src="../assets/icons8-home.svg" alt="home" class="svgButton" />
+        首頁</a
+      >
+    </button>
+
+    <button>
+      <a
+        routerLink="/first"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        class="mr-5 hover:text-gray-900"
+      >
+        <img
+          src="../assets/map-find-search-svgrepo-com.svg"
+          alt=""
+          class="svgButton"
+        />網站地圖</a
+      >
+    </button>
+
+    <button>
+      <a
+        routerLink="/second"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        class="mr-5 hover:text-gray-900"
+      >
+        <img
+          src="../assets/contact-us-filled-svgrepo-com.svg"
+          alt=""
+          class="svgButton"
+        />聯絡我們</a
+      >
     </button>
   </div>
   <div class="r-slogon">
