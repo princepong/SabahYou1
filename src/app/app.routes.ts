@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { PageNotFindComponent } from './page-not-find/page-not-find.component';
 // import { PageNotFindComponent } from './page-not-find/page-not-find.component';
 
 // export class RouteConsts {
@@ -11,10 +12,10 @@ import { SecondComponent } from './second/second.component';
 //   }
 
 export const routes: Routes = [
-    { path: '', title:'Home', component: HomeComponent },
-    { path: "home", title:'Home', component: HomeComponent },
-    { path: "first", title:'First', component: FirstComponent },
-    { path: "second",title:'Second', component: SecondComponent }
-    //{ path: '', redirectTo: '/', pathMatch: 'full'},
-    //{ path: '**', title:'404', component: PageNotFindComponent }
+    { path: '', title:'Sabah-Home', component: HomeComponent },
+    { path: "home", title:'Sabah-Home', component: HomeComponent },
+    { path: "map", title:'Sabah-Map', component: SecondComponent },
+    { path: "contact",title:'Sabah-Contact', component: FirstComponent },
+    { path: '', redirectTo: '/', pathMatch: 'full'},
+    { path: '**', title:'404', component: PageNotFindComponent }
 ];
