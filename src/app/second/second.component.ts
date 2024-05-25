@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './second.component.scss'
 })
 export class SecondComponent {
+  [x: string]: any;
   constructor(private router: Router) {}
   @ViewChild('blogHeaderContainerTitleOne') blogHeaderContainerTitleOne!: ElementRef;
   @ViewChild('blogHeaderContainerTitleTwo') blogHeaderContainerTitleTwo!: ElementRef;
@@ -20,20 +21,25 @@ export class SecondComponent {
 }
 
 scrollToElement(elementRef: ElementRef) {
-
+  if (elementRef) {
+    elementRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    console.error('elementRef is not defined');
+  }
 }
+
 
 scrollToOne() {
-  this.blogHeaderContainerTitleOne.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  this.scrollToElement(this.blogHeaderContainerTitleOne);
 }
 scrollToTwo() {
-  this.blogHeaderContainerTitleTwo.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  this.scrollToElement(this.blogHeaderContainerTitleTwo);
 }
 scrollToThree() {
-  this.blogHeaderContainerTitleThree.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  this.scrollToElement(this.blogHeaderContainerTitleThree);
 }
 scrollToFour() {
-  this.blogHeaderContainerTitleFour.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  this.scrollToElement(this.blogHeaderContainerTitleFour);
 }
 }
 
