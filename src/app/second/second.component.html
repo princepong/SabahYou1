@@ -1,24 +1,27 @@
 <div class="blog">
   <div class="blog-part is-menu">
-    <a class="blog-menu">認識沙巴</a>
-    <a class="blog-menu">您的沙巴行程，由您設計</a>
-    <a class="blog-menu">出遊前的準備</a>
-    <a class="blog-menu">我們的服務</a>
-    <a class="blog-menu mention">聯絡我們</a>
-    <a class="blog-menu subscribe">Subscribe</a>
+    <a class="blog-menu navbar-cursor" (click)="scrollToOne()">認識沙巴</a>
+    <a class="blog-menu navbar-cursor" (click)="scrollToTwo()">計劃行程</a>
+    <a class="blog-menu navbar-cursor" (click)="scrollToThree()">出遊準備</a>
+    <a class="blog-menu navbar-cursor" (click)="scrollToFour()">專業服務</a>
+    <a class="blog-menu mention navbar-cursor" (click)="navigateToContactPage()">聯絡我們</a>
+    <a 
+    class="blog-menu subscribe navbar-cursor"
+    >馬上訂閱
+  </a>
   </div>
   <div class="blog-header blog-is-sticky">
     <div class="blog-article header-article">
-      <div class="blog-big__title">快來吧</div>
-      <div class="blog-menu rounded small-title">Pinned Issue</div>
+      <div class="blog-big__title">來吧</div>
+      <div class="blog-menu rounded small-title">JOIN NOW</div>
     </div>
     <div class="blog-article page-number">NO. 01</div>
   </div>
   <div class="blog-header-container">
     <div class="blog-header">
       <div class="blog-article header-article">
-        <div class="blog-big__title">Esteem</div>
-        <div class="blog-menu small-title date">12.06.2021</div>
+        <div class="blog-big__title" #blogHeaderContainerTitleOne>認識沙巴</div>
+        <div class="blog-menu small-title date">KNOW ABOUT SABAH</div>
       </div>
       <div class="blog-article">
         <img
@@ -54,8 +57,8 @@
     </div>
     <div class="blog-header">
       <div class="blog-article header-article">
-        <div class="blog-big__title">Love</div>
-        <div class="blog-menu small-title date">12.06.2021</div>
+        <div class="blog-big__title" #blogHeaderContainerTitleTwo>計劃行程</div>
+        <div class="blog-menu small-title date">TRAVEL PLAN</div>
       </div>
       <div class="blog-article">
         <img
@@ -91,8 +94,45 @@
     </div>
     <div class="blog-header">
       <div class="blog-article header-article">
-        <div class="blog-big__title">Control</div>
-        <div class="blog-menu small-title date">12.06.2021</div>
+        <div class="blog-big__title" #blogHeaderContainerTitleThree>出遊準備</div>
+        <div class="blog-menu small-title date">PREPARETION</div>
+      </div>
+      <div class="blog-article">
+        <img
+          src="https://images.unsplash.com/photo-1616248249518-b16013cd4e42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkzfHxibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt=""
+        />
+        <h2>How 2020 Changed <span>Understanding</span> Of Mental Health</h2>
+        <div class="blog-detail">
+          <span>By Scarlett Witch</span>
+          <span>5 Min Read</span>
+        </div>
+        <p>
+          Time is defines ad the indefinete continued progress, with critics
+          praising Ocean's introspective lyrics and the album's
+        </p>
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-corner-down-right"
+            viewBox="0 0 24 24"
+          >
+            <path d="M15 10l5 5-5 5" />
+            <path d="M4 4v7a4 4 0 004 4h12" />
+          </svg>
+          See More
+        </a>
+      </div>
+    </div>
+    <div class="blog-header">
+      <div class="blog-article header-article">
+        <div class="blog-big__title" #blogHeaderContainerTitleFour>專業服務</div>
+        <div class="blog-menu small-title date">OUR SERVICES</div>
       </div>
       <div class="blog-article">
         <img
@@ -129,9 +169,9 @@
   </div>
   <div class="blog-part right-blog">
     <marquee width="100%" direction="left">
-      <span>Now And Then You Miss It Sounds Make You Cry</span>
-      <span>Now In - MoMa Sharing Exhibition NOW</span>
-      <span>NYC Opens After Long Lockdown Check</span>
+      <span>用3分鐘的時間</span>
+      <span>來計劃一個獨一無二的沙巴旅程</span>
+      <span>好好放鬆自己</span>
     </marquee>
     <div class="blog-right-title-container">
       <div class="blog-right-title">Featured Articles</div>
