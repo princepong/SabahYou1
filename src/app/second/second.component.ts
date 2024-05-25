@@ -9,8 +9,14 @@ import { Router } from '@angular/router';
   styleUrl: './second.component.scss'
 })
 export class SecondComponent {
-  [x: string]: any;
+  
   constructor(private router: Router) {}
+
+  ngAfterViewInit() {
+    // Add an event listener to check scroll position on window scroll event
+    window.addEventListener('scroll', this.checkScrollPosition);
+  }
+
   @ViewChild('blogHeaderContainerTitleOne') blogHeaderContainerTitleOne!: ElementRef;
   @ViewChild('blogHeaderContainerTitleTwo') blogHeaderContainerTitleTwo!: ElementRef;
   @ViewChild('blogHeaderContainerTitleThree') blogHeaderContainerTitleThree!: ElementRef;
@@ -20,14 +26,22 @@ export class SecondComponent {
   this.router.navigate(['/contact']);
 }
 
+checkScrollPosition() {
+  const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+  console.log(`Current Y-axis scroll position: ${currentScrollY}`);
+  // You can also perform other actions based on the scroll position
+}
+
 scrollToElement(elementRef: ElementRef) {
   if (elementRef) {
-    elementRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    elementRef.nativeElement.scrollIntoView({ behavior: 'smooth' }); // first step
+    setTimeout(() => {
+      window.scrollTo({ top: 483, behavior: 'smooth' });
+    }, 800); // Adjust the timeout as necessary
   } else {
     console.error('elementRef is not defined');
   }
 }
-
 
 scrollToOne() {
   this.scrollToElement(this.blogHeaderContainerTitleOne);
