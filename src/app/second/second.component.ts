@@ -1,10 +1,12 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLinkActive } from '@angular/router';
 import { Router } from '@angular/router';
+import {YouTubePlayer} from '@angular/youtube-player';
 @Component({
   selector: 'app-second',
   standalone: true,
-  imports: [RouterLinkActive],
+  imports: [RouterLinkActive, YouTubePlayer],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './second.component.html',
   styleUrl: './second.component.scss'
 })
@@ -12,9 +14,16 @@ export class SecondComponent {
   
   constructor(private router: Router) {}
 
+  ngOnInit()
+  {
+    // const scriptTag = document.createElement('script');
+    // scriptTag.src = "https://www.youtube.com/iframe_api";
+    // document.body.appendChild(scriptTag);
+  }
+
   ngAfterViewInit() {
     // Add an event listener to check scroll position on window scroll event
-    window.addEventListener('scroll', this.checkScrollPosition);
+    // window.addEventListener('scroll', this.checkScrollPosition);
   }
   @ViewChild('containerTitle') containerTitle!: ElementRef;
   @ViewChild('blogHeaderContainerTitleOne') blogHeaderContainerTitleOne!: ElementRef;

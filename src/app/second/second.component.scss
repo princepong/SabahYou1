@@ -49,7 +49,7 @@ body {
  height: 90vh;
  max-height: 800px;
  overflow: hidden;
- grid-template-columns: 15% 20% 35% 30%;
+ grid-template-columns: 10% 18% 35% 37%;
  grid-template-rows: 100%;
  width: 100%;
  padding: 40px 4px;
@@ -462,3 +462,14 @@ marquee {
 .navbar-cursor {
     cursor: pointer;
   }
+
+  .video-container {
+    position: relative;
+    //padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    //height: 9px;
+    //width: 16px;
+    overflow: hidden;
+    max-width: 100%;
+    background: #ffffff;
+  }
+  
