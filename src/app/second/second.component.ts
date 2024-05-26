@@ -43,6 +43,10 @@ scrollToElement(elementRef: ElementRef) {
   }
 }
 
+scrollToWindowBottom() {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
 
 
 scrollToOne() {
