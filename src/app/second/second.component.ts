@@ -46,7 +46,7 @@ scrollToElement(elementRef: ElementRef) {
     elementRef.nativeElement.scrollIntoView({ behavior: 'smooth' }); // first step
     setTimeout(() => {
       window.scrollTo({ top: 483, behavior: 'smooth' });
-    }, 800); // Adjust the timeout as necessary
+    }, 1000); // Adjust the timeout as necessary
   } else {
     console.error('elementRef is not defined');
   }

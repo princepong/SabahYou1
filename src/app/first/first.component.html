@@ -1,24 +1,45 @@
-<p i18n>first works!</p>
-<img alt="hero image" i18n-alt class="hero-image" src="">
-<img alt="shopping icon" i18n-alt class="Shopping-icon" src="">
-<table> 
-    <tr>
-        <th i18n>Item</th>
-        <th i18n>Qty</th>
-        <th i18n>Date</th>
-        <th i18n>Amount</th>
-    </tr>
-    <p>The hero's birthday is {{ birthday | date }}</p>
-    <tr>
-        <td>Big Box Item</td>
-        <td>1</td>
-        <td>{{"05/01/2022" | date}}</td>
-        <td>{{129 | currency}}</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td i18n class="total-amount-label">Total Amount</td>
-        <td class="total-amount">{{129 | currency}}</td>
-    </tr>
-</table>
+<div class="container">
+    <div class="header">聯絡我們</div>
+    <p>如果您有任何有關訂單問題或產品的疑問，可以透過以下的表格將問題提交。</p>
+    <form>
+        <div class="form-group">
+            <label for="name">稱呼：</label>
+            <select id="name">
+                <option>小姐</option>
+                <option>先生</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subject">我來自：</label>
+            <select id="subject">
+                <option>香港</option>
+                <option>台灣</option>
+                <option>其他</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email">我的信箱：</label>
+            <input type="text" id="email">
+        </div>
+        <div class="form-group">
+            <label for="phone">電話：</label>
+            <input type="text" id="phone">
+        </div>
+        <div class="form-group">
+            <label for="whatsapp">WhatsApp：</label>
+            <input type="text" id="whatsapp">
+        </div>
+        <div class="form-group">
+            <label for="line">LINE：</label>
+            <input type="text" id="line">
+        </div>
+        <div class="form-group">
+            <label for="wechat">WeChat：</label>
+            <input type="text" id="wechat">
+        </div>
+        <div class="form-group">
+            <p class="note">記得留下您的WhatsApp/LINE/WeChat，謝謝！</p>
+        </div>
+        <button type="submit" class="btn">提交</button>
+    </form>
+</div>
