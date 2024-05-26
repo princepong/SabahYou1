@@ -16,7 +16,7 @@ export class SecondComponent {
     // Add an event listener to check scroll position on window scroll event
     window.addEventListener('scroll', this.checkScrollPosition);
   }
-
+  @ViewChild('containerTitle') containerTitle!: ElementRef;
   @ViewChild('blogHeaderContainerTitleOne') blogHeaderContainerTitleOne!: ElementRef;
   @ViewChild('blogHeaderContainerTitleTwo') blogHeaderContainerTitleTwo!: ElementRef;
   @ViewChild('blogHeaderContainerTitleThree') blogHeaderContainerTitleThree!: ElementRef;
@@ -42,6 +42,8 @@ scrollToElement(elementRef: ElementRef) {
     console.error('elementRef is not defined');
   }
 }
+
+
 
 scrollToOne() {
   this.scrollToElement(this.blogHeaderContainerTitleOne);
