@@ -46,7 +46,7 @@ body {
  background-color: $blog-bg;
  //max-width: 1350px;
  display: grid;
- height: 90vh;
+ height: 160vh;
  max-height: 800px;
  overflow: hidden;
  grid-template-columns: 10% 18% 35% 37%;
@@ -60,13 +60,15 @@ body {
  }
 
  @media screen and (max-width: 768px) {
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 20% 40% 40%;
   width: 100%;
   max-width: none;
  }
 
  @media screen and (max-width: 560px) {
   grid-template-columns: 100%;
+  grid-template-rows: 500px 500px;
+  max-height: 2000px;
  }
 
  &-part {
@@ -381,7 +383,7 @@ marquee {
   font-family: $title-font;
   font-size: 28px;
   font-weight: 600;
-  max-width: 16ch;
+  max-width: 20ch;
   letter-spacing: -2px;
  }
 
@@ -402,7 +404,7 @@ marquee {
  flex-direction: column;
 
  @media screen and (max-width: 768px) {
-  display: none;
+  display: block;
  }
 
  .blog-menu {
