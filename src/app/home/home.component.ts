@@ -6,6 +6,7 @@ import badgeData from '../../assets/badge-data.json';
 import noteData from '../../assets/note-data.json';
 import preparationData from '../../assets/preparation-data.json';
 import langlnData from '../../assets/langln-data.json';
+import hotelData from '../../assets/hotel-data.json';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ export class HomeComponent  {
   noteItems: any[] = []
   preparationItems: any[] = []
   langlnItems: any[] = []
+  hotelItems: any[] = []
   
 
   constructor() { }
@@ -30,6 +32,7 @@ export class HomeComponent  {
     this.noteItems = noteData;
     this.preparationItems = preparationData;
     this.langlnItems = langlnData;
+    this.hotelItems = hotelData;
   }
 
 }

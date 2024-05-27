@@ -85,20 +85,31 @@
         </p>
        </div>
       </div>
+      <!-- hotelData -->
       <div class="card">
        <div class="card-body">
         <h5 class="card-title">
-         Popular stories
+          住宿
         </h5>
         <p class="card-text">
-         <a href="#">
-          The blind man
-         </a>
+         <span class="badge bg-secondary" *ngFor="let hotel of hotelItems">
+          {{hotel.name}}
+         </span>
+         
+        </p>
+       </div>
+      </div>
+      <!-- contact -->
+      <div class="card">
+       <div class="card-body">
+        <h5 class="card-title">
+         聯絡我們
+        </h5>
+        <p class="card-text">
+          <img src="../../assets/whatsapp.png" alt="">
         </p>
         <p class="card-text">
-         <a href="#">
-          Crying on the news
-         </a>
+         <img src="../../assets/line.png" alt="">
         </p>
        </div>
       </div>
