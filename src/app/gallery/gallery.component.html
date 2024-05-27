@@ -1,0 +1,11 @@
+<!-- gallery.component.html -->
+<div class="card">
+    <img [src]="imageSrc" [alt]="imageAlt" class="card-img-top" height="400" width="600"/>
+    <div class="card-body">
+      <h5 class="card-title">{{ title }}</h5>
+      <p class="card-text">{{ description }}</p>
+      <p class="card-text">
+        <small class="text-muted">{{ timestamp }} / {{ category }}</small>
+      </p>
+    </div>
+  </div>
