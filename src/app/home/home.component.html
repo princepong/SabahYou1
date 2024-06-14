@@ -9,8 +9,10 @@
           [imageAlt]="item.imageAlt" 
           [title]="item.title" 
           [description]="item.description" 
-          [timestamp]="item.timestamp" 
-          [category]="item.category">
+          [priceStamp]="item.priceStamp" 
+          [category]="item.category"
+          (click)="navigateToSpecificParameter(item.imageAlt)"
+          >
         </app-gallery>
         
       </div>

@@ -12,6 +12,6 @@ export class GalleryComponent {
   @Input() imageAlt: string = '';
   @Input() title: string = '';
   @Input() description: string = '';
-  @Input() timestamp: string = '';
+  @Input() priceStamp: string = '';
   @Input() category: string = '';
 }
