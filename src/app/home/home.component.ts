@@ -1,5 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { routes } from '../app.routes';
+import { RouterOutlet } from '@angular/router';
 import { GalleryComponent } from '../gallery/gallery.component';
 import { NgFor } from '@angular/common';
 import galleryData from '../../assets/gallery-data.json';
@@ -12,25 +19,20 @@ import hotelData from '../../assets/hotel-data.json';
 @Component({
   selector: 'app-home',
   standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [GalleryComponent, NgFor],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent  {
+export class HomeComponent {
+  galleryItems: any[] = [];
+  badgeItems: any[] = [];
+  noteItems: any[] = [];
+  preparationItems: any[] = [];
+  langlnItems: any[] = [];
+  hotelItems: any[] = [];
 
-  galleryItems: any[] = []
-  badgeItems: any[] = []
-  noteItems: any[] = []
-  preparationItems: any[] = []
-  langlnItems: any[] = []
-  hotelItems: any[] = []
-
-  filteredGalleryItems: any[] = []
-  
-
-  constructor(private router: Router, private route: ActivatedRoute) { 
-    
-  }
+  constructor(private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.galleryItems = galleryData;
     this.badgeItems = badgeData;
@@ -38,23 +40,9 @@ export class HomeComponent  {
     this.preparationItems = preparationData;
     this.langlnItems = langlnData;
     this.hotelItems = hotelData;
-
-
-     // Retrieve the specificParameter value from the route
-     this.route.paramMap.subscribe(params => {
-      const specificParameter = params.get('specificParameter');
-
-      // Filter the galleryItems array based on the specificParameter value
-      this.filteredGalleryItems = this.galleryItems.filter(item => item.category === specificParameter);
-    });
-
-    
   }
 
   navigateToSpecificParameter(specificParameter: string) {
-    this.router.navigate(['home', specificParameter], { relativeTo: this.route });
+    this.router.navigate(['home', specificParameter]);
   }
-
-  
-
 }
