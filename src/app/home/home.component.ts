@@ -4,7 +4,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute,RouterModule } from '@angular/router';
 import { routes } from '../app.routes';
 import { RouterOutlet } from '@angular/router';
 import { GalleryComponent } from '../gallery/gallery.component';
@@ -20,7 +20,7 @@ import hotelData from '../../assets/hotel-data.json';
   selector: 'app-home',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [GalleryComponent, NgFor],
+  imports: [GalleryComponent, NgFor,RouterModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -31,6 +31,9 @@ export class HomeComponent {
   preparationItems: any[] = [];
   langlnItems: any[] = [];
   hotelItems: any[] = [];
+
+  gallerySwitchButton: boolean = false;
+  back2Gallery: boolean = true;
 
   constructor(private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
@@ -43,6 +46,11 @@ export class HomeComponent {
   }
 
   navigateToSpecificParameter(specificParameter: string) {
-    this.router.navigate(['home', specificParameter]);
+    this.router.navigate(['home','series', specificParameter]);
+  }
+
+  gallerySwitch(){
+    this.gallerySwitchButton = !this.gallerySwitchButton;
+    this.back2Gallery = !this.back2Gallery;
   }
 }

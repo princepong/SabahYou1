@@ -3,24 +3,27 @@ import { HomeComponent } from './home/home.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { PageNotFindComponent } from './page-not-find/page-not-find.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryChildComponent } from './gallery-child/gallery-child.component';
+import galleryData from '../assets/gallery-data.json';
 
+// const seriesRoutes = galleryData.map((item: any) => {
+//     return {path: `series/${item.seriesId}`, title: item.seriesId, component: GalleryChildComponent};
+// });
 
 export const routes: Routes = [
     { path: '', title:'Sabah-Home', component: HomeComponent },
     { path: "home", title:'Sabah-Home', component: HomeComponent,
         children: [
-            {path: 'MK11', title:'MK11', component: GalleryChildComponent},
-            {path: 'MK05', title:'MK05', component: GalleryChildComponent},
-            {path: 'MK01', title:'MK01', component: GalleryChildComponent},
-            {path: 'SK43', title:'SK43', component: GalleryChildComponent},
-            {path: 'SK03', title:'SK03', component: GalleryChildComponent},
-            {path: 'SK42', title:'SK42', component: GalleryChildComponent},
-            {path: 'SK41', title:'SK41', component: GalleryChildComponent},
-            {path: 'SK06', title:'SK06', component: GalleryChildComponent},
-            {path: 'SF02', title:'SF02', component: GalleryChildComponent},
-            {path: 'LK03', title:'LK03', component: GalleryChildComponent},
+            {path: 'series/MK11', title:'MK11', component: GalleryChildComponent},
+            {path: 'series/MK05', title:'MK05', component: GalleryChildComponent},
+            {path: 'series/MK01', title:'MK01', component: GalleryChildComponent},
+            {path: 'series/SK43', title:'SK43', component: GalleryChildComponent},
+            {path: 'series/SK03', title:'SK03', component: GalleryChildComponent},
+            {path: 'series/SK42', title:'SK42', component: GalleryChildComponent},
+            {path: 'series/SK41', title:'SK41', component: GalleryChildComponent},
+            {path: 'series/SK06', title:'SK06', component: GalleryChildComponent},
+            {path: 'series/SF02', title:'SF02', component: GalleryChildComponent},
+            {path: 'series/LK03', title:'LK03', component: GalleryChildComponent},
 
         ]
     },
