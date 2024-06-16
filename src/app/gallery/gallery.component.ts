@@ -14,4 +14,5 @@ export class GalleryComponent {
   @Input() description: string = '';
   @Input() priceStamp: string = '';
   @Input() category: string = '';
+  @Input() isGalleryVisible = true;
 }

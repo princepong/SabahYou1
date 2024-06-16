@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import galleryData from '../../assets/gallery-data.json';
+import { Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-gallery-child',
   standalone: true,
@@ -13,6 +14,7 @@ import galleryData from '../../assets/gallery-data.json';
 export class GalleryChildComponent implements OnInit {
   seriesId: string = '';
   seriesData = galleryData;
+  @Output() galleryClicked = new EventEmitter<boolean>();
  
   constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -21,6 +23,10 @@ export class GalleryChildComponent implements OnInit {
       this.seriesId = url[1].path;  // Assuming the URL structure is /home/series/:id
       this.loadSeriesContent(this.seriesId);
     });
+  }
+
+  onGalleryClick() {
+    this.galleryClicked.emit(true);
   }
 
   loadSeriesContent(seriesId: string): void {

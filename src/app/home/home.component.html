@@ -3,9 +3,10 @@
     <div class="col-md-8" >
      <div class="row">
       
-      <div class="col-md-6" *ngFor="let item of galleryItems">
+      <div class="col-md-6" *ngFor="let item of galleryItems"  >
         
           <app-gallery 
+          [style]="{display: toggleGalleryVisibility}"
           [imageSrc]="item.imageSrc" 
           [imageAlt]="item.imageAlt" 
           [title]="item.title" 
@@ -13,6 +14,7 @@
           [priceStamp]="item.priceStamp" 
           [category]="item.category"
           (click)="navigateToSpecificParameter(item.imageAlt)"
+          *ngIf="toggleGalleryVisibility"
           >
         </app-gallery>
         
@@ -21,7 +23,8 @@
       <!-- (click)="navigateToSpecificParameter(item.imageAlt)" -->
       
       <!-- Router outlet for child routes -->
-      <router-outlet></router-outlet>
+      <router-outlet  *ngIf="!toggleGalleryVisibility"></router-outlet>
+      <!-- parent.component.html -->
 
       
      </div>

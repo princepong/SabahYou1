@@ -9,6 +9,7 @@ import { routes } from '../app.routes';
 import { RouterOutlet } from '@angular/router';
 import { GalleryComponent } from '../gallery/gallery.component';
 import { NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import galleryData from '../../assets/gallery-data.json';
 import badgeData from '../../assets/badge-data.json';
 import noteData from '../../assets/note-data.json';
@@ -20,7 +21,7 @@ import hotelData from '../../assets/hotel-data.json';
   selector: 'app-home',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [GalleryComponent, NgFor,RouterModule ],
+  imports: [GalleryComponent, NgFor,RouterModule, CommonModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -32,6 +33,7 @@ export class HomeComponent {
   langlnItems: any[] = [];
   hotelItems: any[] = [];
 
+  toggleGalleryVisibility:boolean = true;
 
   constructor(private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
@@ -43,8 +45,20 @@ export class HomeComponent {
     this.hotelItems = hotelData;
   }
 
+  toggleVisibility(){
+    this.toggleGalleryVisibility = !this.toggleGalleryVisibility;
+    console.log(`toggleGalleryVisibility: ${this.toggleGalleryVisibility}`);
+  }
+
+  onGalleryClicked(event: boolean) {
+    console.log('Gallery clicked in child component:', event);
+    // Implement logic to handle the event
+  }
+
   navigateToSpecificParameter(specificParameter: string) {
     this.router.navigate(['home','series', specificParameter]);
+    this.toggleVisibility();
+    
   }
 
 
