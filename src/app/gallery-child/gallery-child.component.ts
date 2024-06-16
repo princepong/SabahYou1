@@ -20,7 +20,7 @@ export class GalleryChildComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.url.subscribe(url => {
-      this.seriesId = url[1].path;  // Assuming the URL structure is /home/series/:id
+      this.seriesId = url[1].path || '';  // Assuming the URL structure is /home/series/:id
       this.loadSeriesContent(this.seriesId);
     });
   }

@@ -8,6 +8,7 @@ import { Router, ActivatedRoute,RouterModule } from '@angular/router';
 import { routes } from '../app.routes';
 import { RouterOutlet } from '@angular/router';
 import { GalleryComponent } from '../gallery/gallery.component';
+import { GalleryChildComponent } from '../gallery-child/gallery-child.component';
 import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import galleryData from '../../assets/gallery-data.json';
@@ -21,7 +22,7 @@ import hotelData from '../../assets/hotel-data.json';
   selector: 'app-home',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [GalleryComponent, NgFor,RouterModule, CommonModule ],
+  imports: [GalleryComponent,GalleryChildComponent, NgFor,RouterModule, CommonModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
