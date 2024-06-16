@@ -1,20 +1,16 @@
 <div *ngIf="seriesId">
     <h1>Series: {{ seriesId }}</h1>
-    <div *ngIf="seriesId === 'MK11'">
-      <!-- Content for MK11 -->
-      <p>This is the content for MK11.</p>
+    <div *ngFor="let series of seriesData">
+      <div *ngIf="seriesId === series.imageAlt">
+        <!-- Content for the series -->
+        <p>this is {{ series.imageAlt }}</p>
+      </div>
     </div>
-    <div *ngIf="seriesId === 'MK05'">
-      <!-- Content for MK05 -->
-      <p>This is the content for MK05.</p>
-    </div>
-    <div *ngIf="seriesId === 'MK01'">
-      <!-- Content for MK01 -->
-      <p>This is the content for MK01.</p>
-    </div>
-    <!-- Add more conditions for other series IDs -->
   </div>
+
   
   <div *ngIf="!seriesId">
     <p>No series selected.</p>
   </div>
+
+  <button (click)="navigateToHome()">back home</button>

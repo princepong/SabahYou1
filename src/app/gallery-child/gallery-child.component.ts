@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Import CommonModule
+import galleryData from '../../assets/gallery-data.json';
 @Component({
   selector: 'app-gallery-child',
   standalone: true,
@@ -11,8 +12,9 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 })
 export class GalleryChildComponent implements OnInit {
   seriesId: string | null = null;
-
-  constructor(private route: ActivatedRoute) { }
+  seriesData = galleryData;
+ 
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.url.subscribe(url => {
@@ -25,6 +27,10 @@ export class GalleryChildComponent implements OnInit {
     // Implement logic to load different content based on seriesId
     console.log('Loading content for series:', seriesId);
     // You can use seriesId to fetch data or set variables to display different content
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/home']); // Navigate to the home route
   }
 
   
