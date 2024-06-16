@@ -11,7 +11,7 @@ import galleryData from '../../assets/gallery-data.json';
   styleUrl: './gallery-child.component.scss'
 })
 export class GalleryChildComponent implements OnInit {
-  seriesId: string | null = null;
+  seriesId: string = '';
   seriesData = galleryData;
  
   constructor(private route: ActivatedRoute, private router: Router) { }
@@ -23,14 +23,14 @@ export class GalleryChildComponent implements OnInit {
     });
   }
 
-  loadSeriesContent(seriesId: string | null): void {
+  loadSeriesContent(seriesId: string): void {
     // Implement logic to load different content based on seriesId
     console.log('Loading content for series:', seriesId);
     // You can use seriesId to fetch data or set variables to display different content
   }
 
   navigateToHome() {
-    this.router.navigate(['/home']); // Navigate to the home route
+    this.router.navigate(['/']); // Navigate to the home route
   }
 
   

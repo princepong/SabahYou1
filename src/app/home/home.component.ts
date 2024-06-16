@@ -32,8 +32,6 @@ export class HomeComponent {
   langlnItems: any[] = [];
   hotelItems: any[] = [];
 
-  gallerySwitchButton: boolean = false;
-  back2Gallery: boolean = true;
 
   constructor(private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
@@ -49,8 +47,5 @@ export class HomeComponent {
     this.router.navigate(['home','series', specificParameter]);
   }
 
-  gallerySwitch(){
-    this.gallerySwitchButton = !this.gallerySwitchButton;
-    this.back2Gallery = !this.back2Gallery;
-  }
+
 }
