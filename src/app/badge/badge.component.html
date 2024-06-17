@@ -1,0 +1,53 @@
+<div [ngSwitch]="badgeSection">
+  <div *ngSwitchCase="'badges'">
+    <!-- Content for badges section -->
+    沙巴實用資料
+    <div *ngFor="let item of badges">
+      <div *ngIf="item.name == badgeTitle">
+        <p>{{ item.name }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'notes'">
+    <!-- Content for notes section -->
+    沙巴旅遊須知
+    <div *ngFor="let item of notes">
+        <div *ngIf="item.name == badgeTitle">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+  </div>
+  <div *ngSwitchCase="'preparations'">
+    <!-- Content for preparations section -->
+    出發到沙巴前個人準備物品
+    <div *ngFor="let item of preparations">
+        <div *ngIf="item.name == badgeTitle">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+  </div>
+  <div *ngSwitchCase="'langs'">
+    <!-- Content for langln section -->
+    學學馬來西亞語
+    <div *ngFor="let item of langs">
+        <div *ngIf="item.name == badgeTitle">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+  </div>
+  <div *ngSwitchCase="'hotels'">
+    <!-- Content for hotels section -->
+    住宿
+    <div *ngFor="let item of hotels">
+        <div *ngIf="item.name == badgeTitle">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+  </div>
+  <div *ngSwitchDefault>
+    <!-- Default content if no cases match -->
+    Default Section Content
+  </div>
+</div>
+
+<button (click)="navigateToHome()">back home</button>

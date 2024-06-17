@@ -9,6 +9,7 @@ import { routes } from '../app.routes';
 import { RouterOutlet } from '@angular/router';
 import { GalleryComponent } from '../gallery/gallery.component';
 import { GalleryChildComponent } from '../gallery-child/gallery-child.component';
+import { BadgeComponent } from '../badge/badge.component';
 import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import galleryData from '../../assets/gallery-data.json';
@@ -22,7 +23,7 @@ import hotelData from '../../assets/hotel-data.json';
   selector: 'app-home',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [GalleryComponent,GalleryChildComponent, NgFor,RouterModule, CommonModule ],
+  imports: [GalleryComponent,GalleryChildComponent, BadgeComponent, NgFor,RouterModule, CommonModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -39,6 +40,7 @@ export class HomeComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.galleryItems = galleryData;
+    
     this.badgeItems = badgeData;
     this.noteItems = noteData;
     this.preparationItems = preparationData;
@@ -47,7 +49,7 @@ export class HomeComponent {
   }
 
   toggleVisibility(){
-    this.toggleGalleryVisibility = !this.toggleGalleryVisibility;
+    this.toggleGalleryVisibility = false;
     console.log(`toggleGalleryVisibility: ${this.toggleGalleryVisibility}`);
   }
 
@@ -59,7 +61,26 @@ export class HomeComponent {
   navigateToSpecificParameter(specificParameter: string) {
     this.router.navigate(['home','series', specificParameter]);
     this.toggleVisibility();
-    
+  }
+  navigateToSpecificParameterBadge(specificParameter: string) {
+    this.router.navigate(['home','badges', specificParameter]);
+    this.toggleVisibility();
+  }
+  navigateToSpecificParameterNote(specificParameter: string) {
+    this.router.navigate(['home','notes', specificParameter]);
+    this.toggleVisibility();
+  }
+  navigateToSpecificParameterPreparation(specificParameter: string) {
+    this.router.navigate(['home','preparations', specificParameter]);
+    this.toggleVisibility();
+  }
+  navigateToSpecificParameterLang(specificParameter: string) {
+    this.router.navigate(['home','langs', specificParameter]);
+    this.toggleVisibility();
+  }
+  navigateToSpecificParameterHotel(specificParameter: string) {
+    this.router.navigate(['home','hotels', specificParameter]);
+    this.toggleVisibility();
   }
 
 
