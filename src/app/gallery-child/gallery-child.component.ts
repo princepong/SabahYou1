@@ -14,7 +14,7 @@ import { Output, EventEmitter } from '@angular/core';
 export class GalleryChildComponent implements OnInit {
   seriesId: string = '';
   seriesData = galleryData;
-  @Output() galleryClicked = new EventEmitter<boolean>();
+  //@Output() galleryClicked = new EventEmitter<boolean>();
  
   constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -25,9 +25,9 @@ export class GalleryChildComponent implements OnInit {
     });
   }
 
-  onGalleryClick() {
-    this.galleryClicked.emit(true);
-  }
+  // onGalleryClick() {
+  //   this.galleryClicked.emit(true);
+  // }
 
   loadSeriesContent(seriesId: string): void {
     // Implement logic to load different content based on seriesId
